@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NRVideoCompression_Example' do
+  pod 'NRVideoCompression', :path => '../'
+
+  target 'NRVideoCompression_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
