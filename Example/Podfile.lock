@@ -1,0 +1,16 @@
+PODS:
+  - NRVideoCompression (0.1.0)
+
+DEPENDENCIES:
+  - NRVideoCompression (from `../`)
+
+EXTERNAL SOURCES:
+  NRVideoCompression:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NRVideoCompression: 7695124a8c4227d2fe1ae4c3b7045cc4496656f4
+
+PODFILE CHECKSUM: 34ccbf29f27c6439c4b445d701c81590e9843b95
+
+COCOAPODS: 1.1.0.rc.2

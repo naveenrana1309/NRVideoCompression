@@ -1,25 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NRVideoCompression_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFt-3p-s2d">
+                                <rect key="frame" x="99" y="292" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.13978169169999999" green="0.67058140560000001" blue="0.74698153410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dwt-y5-T7b"/>
+                                    <constraint firstAttribute="width" constant="176" id="nNq-Uu-pOY"/>
+                                </constraints>
+                                <state key="normal" title="Select Video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectVideoButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cOd-nm-f7B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-yd-QQe">
+                                <rect key="frame" x="99" y="360" width="176" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="GSW-4m-Wf2"/>
+                                    <constraint firstAttribute="height" constant="21" id="kaZ-O8-Kyy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdj-py-uiE">
+                                <rect key="frame" x="99" y="408" width="176" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="CmG-ZY-agm"/>
+                                    <constraint firstAttribute="height" constant="30" id="ewO-vI-Dsf"/>
+                                </constraints>
+                                <state key="normal" title="Compress"/>
+                                <connections>
+                                    <action selector="compressButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OzF-Jc-6ee"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Video Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="crW-na-CIn">
+                                <rect key="frame" x="99" y="465" width="176" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="oJT-An-BBx"/>
+                                    <constraint firstAttribute="height" constant="21" id="tHH-ZW-kZD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IBS-yd-QQe" secondAttribute="bottom" constant="286" id="7ej-2F-y1Y"/>
+                            <constraint firstItem="xdj-py-uiE" firstAttribute="top" secondItem="IBS-yd-QQe" secondAttribute="bottom" constant="27" id="9mr-se-Nzi"/>
+                            <constraint firstItem="crW-na-CIn" firstAttribute="top" secondItem="xdj-py-uiE" secondAttribute="bottom" constant="27" id="QY4-1G-dNl"/>
+                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="xdj-py-uiE" secondAttribute="leading" id="WJT-hC-wju"/>
+                            <constraint firstItem="IBS-yd-QQe" firstAttribute="top" secondItem="HFt-3p-s2d" secondAttribute="bottom" constant="38" id="Wcj-AP-4gW"/>
+                            <constraint firstItem="HFt-3p-s2d" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dog-bT-t8i"/>
+                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="HFt-3p-s2d" secondAttribute="leading" id="otg-mS-23v"/>
+                            <constraint firstItem="IBS-yd-QQe" firstAttribute="leading" secondItem="crW-na-CIn" secondAttribute="leading" id="vtn-jD-eaA"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="newVideoSize" destination="crW-na-CIn" id="Uha-qC-c14"/>
+                        <outlet property="originalVideoSize" destination="IBS-yd-QQe" id="icw-Pp-0sv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="192.5" y="361.5"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,6 @@
+framework module NRVideoCompression {
+  umbrella header "NRVideoCompression-umbrella.h"
+
+  export *
+  module * { export * }
+}

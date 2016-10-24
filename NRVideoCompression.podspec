@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NRVideoCompression'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of NRVideoCompression.'
+  s.version          = '1.0.0'
+  s.summary          = 'This class is used for video compression you can compress the video taken from camera or choose from library.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+NRVideocompression: This class is used for compressing the video taken from iPhone camera or from camera roll. There is various circumstances where you want to send videos to the network but because of the high resolution of iPhone camera videos are of very large size which needs to be compressed before we are sending them to network to save the memory. This library helps you to the compress the size of videos according to your quality choices which have options AVAssetExportPresetLowQuality, AVAssetExportPresetMediumQuality, AVAssetExportPresetHighQuality.
+DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/NRVideoCompression'
+  s.homepage         = 'https://github.com/naveenrana1309/NRVideoCompression'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'naveenrana1309' => 'naveenrana1309@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/NRVideoCompression.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/naveenrana1309/NRVideoCompression.git', :tag => s.version.to_s }
+s.social_media_url = 'https://www.facebook.com/iOSByHeart/'
 
   s.ios.deployment_target = '8.0'
 
