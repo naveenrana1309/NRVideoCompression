@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NRVideoCompression'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'This class is used for video compression you can compress the video taken from camera or choose from library.'
 
 # This description is used to generate tags and improve search results.
